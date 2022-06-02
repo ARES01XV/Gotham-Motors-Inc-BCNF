@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    /* background: #dfe4ea; */
+    background: #313448 !important; 
+}
+
+/* ********** INDEX PAGE *********** */
+header{
+    /* border: 1px solid red; */
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img{
+    /* border: 1px solid red; */
+    width: 20%;
+}
+
+nav{
+    /* border: 1px solid red; */
+    width: 35%;
+}
+nav a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+    margin: 0 1%;
+}
+nav a:hover{
+    color: #313448;
+    background: white;
+    transition: 0.5s ease-in-out;
+}
+
+.main{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 86vh;
+    display: flex;
+    
+}
+
+.left{
+    /* border: 1px solid red; */
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.left img{
+    /* border: 1px solid red; */
+    position: absolute;
+    /* left: -30%;
+    top: -15%; */
+    right: 0%;
+    bottom: 5%;
+    width: 110%;
+    /* height: 100%; */
+}
+
+.right{
+    /* border: 1px solid red; */
+    padding: 1%;
+    width: 60%;
+    position: relative;
+}
+.right h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.right p{
+    text-align: center;
+    line-height: 130%;
+}
+
+.right>a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: #313448;
+    background: white;
+    font-weight: bold;
+    padding: 2%;
+    margin: 0 1%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.right>a:hover{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+/* admin login************** */
+.admin-hidden>a{
+    border: 1px solid red;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    cursor: default;
+    text-decoration: none;
+    color: #313448;
+}
+
+
+/* ********** ADMIN PAGE *********** */
+.table_container{
+    width: 80%;
+}
+
+/* ********** ADMIN LOGIN PAGE *********** */
+.admin-login-form{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background: grey;
+    width: 50%;
+    padding: 3%;
+    margin-top: 5%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

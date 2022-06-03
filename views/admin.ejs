@@ -14,8 +14,10 @@
     <div class="table_container">
     
         <div class="customer-data">
-            <h3>Customer Data</h3>
-            <a href="admin/logout">Log out</a>
+            <h1>Customer Data</h1>
+            <h3>
+                <a href="admin/logout">Log out</a>
+            </h3>
         </div>
         <table class="table table-striped">
             <thead>
@@ -23,6 +25,7 @@
                     <th scope="col">Customer ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Address</th>
+                    <th scope="col">Car ID</th>
                     <th scope="col">Car Name</th>
                     <th scope="col">Manufacturer</th>
                     <th scope="col">Price</th>
@@ -34,7 +37,36 @@
                 <% Object.values(customers).forEach((customers)=> { %>
                     <tr>
                         <td>
-                            <%= customer.cust_name %>
+                            <%= customers.cust_id %>
+                        </td>
+                        <td>
+                            <%= customers.cust_name %>
+                        </td>
+                        <td>
+                            <%= customers.cust_address %>
+                        </td>
+                        <td>
+                            <%= customers.car_id %>
+                        </td>
+                        <td>
+                            <%= customers.car_name %>
+                        </td>
+                        <td>
+                            <%= customers.manufacturer %>
+                        </td>
+                        <td>
+                            <%= customers.price %>
+                        </td>
+                        <td>
+                            <%= customers.release_year %>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-light">
+                                Edit
+                            </a>
+                            <a href="#" class="btn btn-danger">
+                                Delete
+                            </a>
                         </td>
                     </tr>
                 <% }) %>

@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars</title>
+    <!-- links -->
+    <link rel="stylesheet" href="../public/style.css">
 </head>
 <body>
-    
+    <div class="customer-data">
+        <h3>Cars Available</h3>
+        <a href="admin/logout">Log out</a>
+    </div>
+
+    <div class="cards-container">
+        <% Object.values(cars).forEach((cars) => { %>
+            <div class="card">
+                <div class="car-picture">
+                    <img src=" <%= cars.car_image %> " alt="">
+                </div>
+                    <br>
+                <div class="car_name">
+                    <b>
+                        <%= cars.car_name %>
+                    </b>
+                </div>
+                    <br>
+                <div class="car-price">
+                    <p>
+                        <%= cars.price %>
+                    </p>
+                </div>
+                    <br>
+                <div class="release-year">
+                    <p>
+                        <%= cars.release_year %>
+                    </p>
+                </div>
+                    <br>
+                <div class="purchase">
+                    <a href="#">Purchase</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
 </body>
 </html>

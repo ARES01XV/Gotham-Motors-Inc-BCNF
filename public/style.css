@@ -120,11 +120,11 @@ nav a:hover{
 
 /* ********** ADMIN PAGE *********** */
 .table_container{
-    width: 80%;
+    padding: 1%;
 }
 
-/* ********** ADMIN LOGIN PAGE *********** */
-.admin-login-form{
+/* ********** LOGIN FORMS *********** */
+.login-form{
     /* border: 1px solid red; */
     border-radius: 20px;
     background: grey;

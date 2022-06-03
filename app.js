@@ -19,6 +19,8 @@ app.use('/public', express.static('public'));
 var indexRoute = require('./routes/index');
 var adminRoute = require('./routes/admin');
 var admin_loginRoute = require('./routes/admin_login');
+var customer_loginRoute = require('./routes/customer_login');
+var carsRoute = require('./routes/cars');
 
 //setup view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -42,5 +44,8 @@ app.use(flash());  //flash messages stored in message bag
 app.use('/', indexRoute);
 app.use('/admin', adminRoute);
 app.use('/admin_login', admin_loginRoute);
+app.use('/customer_login', customer_loginRoute);
+app.use('/cars', carsRoute);
+
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

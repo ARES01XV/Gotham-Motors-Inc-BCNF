@@ -2,19 +2,27 @@ var express = require('express');
 var router = express.Router();
 var conn = require('../lib/db');
 
-//GET Admin Page
+//GET Admin Login
 // router.get('/', function(req, res, next) {
-//   res.render('admin_login'  );
+//   res.render('admin_login');
 // });
+router.get('/', function(req, res, next) {
+    conn.query('SELECT * FROM gotham_motor_inc.admins WHERE admin_id = 1', (err, results) => {
+        console.log(results)
+        if (err) throw err
+        res.render('admin_login');
+    })
+});
 
 //Admin login
-router.post('/', (req,res, next) => {
+router.post('/admin', (req,res, next) => {
 
     var email = req.body.email;
     var password = req.body.password;
 
-    conn.querry('SELECT * FROM gotham_motor_inc.admins WHERE email = ? AND BINARY password = ?', [email, password], (err, results, fields) => {
+    conn.query('SELECT * FROM gotham_motor_inc.admin WHERE email = ? AND BINARY password = ?', [email, password], (err, results) => {
 
+        console.log(results)
         // if login is incorrect or not found
         if(results.length <= 0) {
             req.flash('error', 'Invalid credentials please try again!')
@@ -29,5 +37,6 @@ router.post('/', (req,res, next) => {
         }
     })
 });
+
 
 module.exports = router;

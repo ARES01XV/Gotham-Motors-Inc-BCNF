@@ -134,3 +134,50 @@ nav a:hover{
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+
+/* ********** CARS PAGE *********** */
+.cards_container {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+.card {
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 450px;
+    border-radius: 20px;
+    margin: 3% 4%;
+    text-align: center;
+    color: black;
+    background: grey;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-picture img {
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.purchase a {
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    background: red;
+    font-size: 16px;
+    color: white;
+    padding: 2% 7%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.purchase a:hover {
+    background: rgb(149, 3, 3);
+}

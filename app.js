@@ -33,12 +33,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 //setup sessions
 app.use(cookieParser());
 app.use(session({
-    secret: 'oppai', //used to generate the token for the session
+    secret: 'oppai', 
     resave: false,
     saveUninitialized: true,
     cookie: {maxAge: 120000}
 }));
-app.use(flash());  //flash messages stored in message bag
+app.use(flash());  
 
 //routing middlewares
 app.use('/', indexRoute);

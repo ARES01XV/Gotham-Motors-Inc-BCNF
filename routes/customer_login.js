@@ -8,12 +8,13 @@ router.get('/', function(req, res, next) {
 });
 
 //Customer login
-router.post('/custlogin', (req,res, next) => {
+router.post('/custlogin', (req, res, next) => {
 
-    var email = req.body.email;
-    var password = req.body.password;
+    email = req.body.email;
+    password = req.body.password;
 
-    conn.query('SELECT * FROM gotham_motor_inc.customers WHERE email = ? AND BINARY password = ?', [email, password], (err, results, fields) => {
+    conn.query('SELECT * FROM gotham_motor_inc.customers WHERE cust_email = ? AND BINARY cust_password = ?', 
+        [email, password], (err, results, fields) => {
 
         // if login is incorrect or not found
         if(results.length <= 0) {

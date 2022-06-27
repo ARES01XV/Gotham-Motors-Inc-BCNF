@@ -137,9 +137,10 @@ nav a:hover{
 
 
 /* ********** CARS PAGE *********** */
-.cards_container {
+.cards-container {
     /* border: 1px solid red; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     /* flex-wrap: wrap; */
 }
